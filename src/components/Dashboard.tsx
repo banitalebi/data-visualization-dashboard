@@ -79,7 +79,7 @@ export function Dashboard() {
                   className="flex items-center gap-2 text-lg font-semibold"
                 >
                   <Package2 className="h-6 w-6" />
-                  <span className="sr-only">Acme Inc</span>
+                  <span className="text-gray-400">Dashboard</span>
                 </Link>
                 <Link
                   href="#"
