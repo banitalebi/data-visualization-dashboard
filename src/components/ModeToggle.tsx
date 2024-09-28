@@ -23,7 +23,7 @@ export function ModeToggle() {
           size="icon"
           className={
             resolvedTheme === "dark"
-              ? "bg-gray-900 text-white"
+              ? "bg-gray-900 text-gray-500"
               : "bg-white text-black"
           }
         >
