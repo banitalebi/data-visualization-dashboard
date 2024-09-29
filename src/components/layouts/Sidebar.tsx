@@ -2,7 +2,7 @@ import { Home, LineChart } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-const Navbar = () => {
+const Sidebar = () => {
   return (
     <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
       <Link
@@ -23,4 +23,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Sidebar;
