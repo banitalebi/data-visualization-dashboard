@@ -24,8 +24,8 @@ import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Charts from "./charts-01";
 import { ModeToggle } from "./ModeToggle";
-import Navbar from "./layouts/Navbar";
-import Sidebar from "./layouts/Sidebar";
+import Navbar from "./layouts/Sidebar";
+import Sidebar from "./layouts/Navbar";
 
 export const description =
   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
