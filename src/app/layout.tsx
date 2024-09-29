@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Dashboard } from "@/components/Dashboard";
+import Navbar from "@/components/layouts/Navbar";
+import { Sidebar } from "lucide-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +38,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Dashboard />
           {children}
         </ThemeProvider>
       </body>
