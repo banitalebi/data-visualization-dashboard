@@ -26,6 +26,7 @@ import Charts from "./charts-01";
 import { ModeToggle } from "./ModeToggle";
 import Navbar from "./layouts/Sidebar";
 import Sidebar from "./layouts/Navbar";
+import { CalendarDateRangePicker } from "./CalendarDateRangePicker";
 
 export const description =
   "A products dashboard with a sidebar navigation and a main content area. The dashboard has a header with a search input and a user menu. The sidebar has a logo, navigation links, and a card with a call to action. The main content area shows an empty state with a call to action.";
@@ -68,7 +69,8 @@ export function Dashboard() {
       <div className="flex flex-col">
         <Sidebar />
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6  dark:bg-gray-900">
-          <div className="flex items-center">
+          <div className="flex flex-col items-center">
+            <CalendarDateRangePicker />
             <Charts />
           </div>
         </main>
