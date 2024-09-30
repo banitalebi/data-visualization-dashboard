@@ -21,7 +21,7 @@ export function CalendarDateRangePicker({
     from: new Date(2023, 0, 20),
     to: addDays(new Date(2023, 0, 20), 20),
   });
-
+  const [calendarOpen, setCalendarOpen] = React.useState(false);
   return (
     <div className={cn("grid gap-2", className)}>
       <Popover>
@@ -30,7 +30,7 @@ export function CalendarDateRangePicker({
             id="date"
             variant={"outline"}
             className={cn(
-              "w-[260px] justify-start text-left font-normal",
+              "w-[260px] justify-start text-left font-normal dark:border-white dark:bg-gray-50",
               !date && "text-muted-foreground"
             )}
           >
