@@ -22,10 +22,14 @@ import Link from "next/link";
 import { Input } from "../ui/input";
 import { ModeToggle } from "../ModeToggle";
 
+import avatar from "../../assets/img.jpg"; // Ensure this path is correct
+import Image from "next/image";
+
 const Navbar = () => {
   const { resolvedTheme } = useTheme();
+
   return (
-    <header className="flex h-14 items-center gap-4 border-b  dark:bg-gray-900 px-4 lg:h-[60px] lg:px-6">
+    <header className="flex h-14 items-center gap-4 border-b dark:bg-gray-900 px-4 lg:h-[60px] lg:px-6">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="outline" size="icon" className="shrink-0 md:hidden">
@@ -63,6 +67,7 @@ const Navbar = () => {
           </nav>
         </SheetContent>
       </Sheet>
+
       <div className="w-full flex-1">
         <form>
           <div className="relative">
@@ -78,11 +83,27 @@ const Navbar = () => {
 
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="secondary" size="icon" className="rounded-full">
-            <CircleUser className="h-5 w-5" />
+          <Button
+            variant="secondary"
+            size="icon"
+            className="rounded-full flex items-center justify-center" // Set width and height
+          >
+            <Image
+              src={avatar}
+              sizes="50vw"
+              style={{
+                width: "50%",
+                height: "auto",
+              }}
+              width={20}
+              height={20}
+              alt="Picture of the author"
+              className="rounded-full" // Optional: Add rounded corners for a circular look
+            />
             <span className="sr-only">Toggle user menu</span>
           </Button>
         </DropdownMenuTrigger>
+
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
@@ -91,6 +112,7 @@ const Navbar = () => {
           <DropdownMenuItem>Logout</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
+
       <ModeToggle />
     </header>
   );
