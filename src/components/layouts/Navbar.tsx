@@ -84,19 +84,14 @@ const Navbar = () => {
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
-            variant="secondary"
             size="icon"
-            className="rounded-full flex items-center justify-center" // Set width and height
+            className="rounded-full flex items-center justify-center border-hidden" // Set width and height
           >
             <Image
               src={avatar}
               sizes="50vw"
-              style={{
-                width: "50%",
-                height: "auto",
-              }}
-              width={20}
-              height={20}
+              width={22}
+              height={22}
               alt="Picture of the author"
               className="rounded-full" // Optional: Add rounded corners for a circular look
             />
