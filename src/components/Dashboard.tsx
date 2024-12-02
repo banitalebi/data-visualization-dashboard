@@ -70,7 +70,10 @@ export function Dashboard() {
         <Sidebar />
         <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-6  dark:bg-gray-900">
           <div className="flex flex-col items-center">
-            <CalendarDateRangePicker />
+            <div className="flex flex-row gap-5">
+              <Button className="dark:bg-black">Download</Button>
+              <CalendarDateRangePicker />
+            </div>
             <Charts />
           </div>
         </main>
